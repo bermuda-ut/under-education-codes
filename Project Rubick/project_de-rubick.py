@@ -16,17 +16,13 @@ MONTH = TIMELIST[1]
 DATE = TIMELIST[2]
 DOY = TIMELIST[7] #Day of Year
 
-msg = '/PPm;9;8/`Pm;`[N/PPt[U[7;TP`;b[8/CPm;([:/8Pi;d[F/yPT/0;$[j;,P8[W[9;@Pw[![(/kPZ;-[C/0P2;h[i/)Og/0[,[_;UP~[T[`;}P-[W[G/+Pp;f[>/~Ps;a[C.eOgPx[T[f/PPr;};8;RP0;~[>/gPm;k;8/PP?;2;$.e/PPm/0;$.ePu;}[0/PPz[^;8'
+msg = ']}[A];]&[m]!]W]IQ-QtQ5]uQt]uQjQ(QH]uQ9]oQ.Q/]!QTQ*]n]!Q.]!]b]v[~S2S.S9ScSqSeSuSlSUSuSbAj]T]^[S;t'
 
 key = 1658# 4-digit internal key, incase breached. not start or entirely zero.
 count = 'qwert5678yulzxcvbnm,./;[]QWER^&*TYUI}!@#OPASDF34GHJKLZXCVBNM<>?:{$iopas12dfghjk()_+-=90`~' #89bit number
 print('HEX : {}'.format(len(count)))
+
 ####################################################
-
-msgList = list(msg)
-
-for nth in range(0,len(msgList)):
-	msgList[nth] = ord(msgList[nth]) + nth*int(DOY/(DATE*(nth+1)))
 
 if len(str(DATE)) == 1:
 	strDATE = '0'+str(DATE)
@@ -122,31 +118,32 @@ msgMtrx = np.roll(msgMtrx,-z)
 tx ,ty, tz, tk = 0, 0, 0, 0
 tempMtrx = np.zeros((x,y,z))
 
-for twoD in msgMtrx:
-	for oneD in twoD:
-		for element in oneD:
-			#print(element)
-			tempMtrx[tx][ty][tz] = element - int(YEAR/int(str(key)[tk]))
+while tx < x:
+	#if(msgMtrx[tx][ty][tz] != 0):
+	tempMtrx[tx][ty][tz] = msgMtrx[tx][tz][ty] - int(YEAR/int(str(key)[tk]))
+	#else:
+	#	tempMtrx[tx][tz][ty] = msgMtrx[tx][ty][tz] + int(YEAR/int(str(key)[tk]))
+	#print('appended to {} {} {}'.format(tx,ty,tz))
+	# If wish to add differnt value for 
 
-			if ty < y-1:
-				ty+=1
-			elif tz < z-1:
-				tz+=1
-				ty = 0
-			else:
-				ty, tz = 0, 0
-				tx+=1
+	if tz < z-1:
+		tz+=1
+	elif ty < y-1:
+		tz = 0
+		ty += 1
+	else:
+		tx += 1
+		ty, tz = 0, 0
 
-			if tk < 3:
-				tk+=1
-			else:
-				tk=0
-
+	if tk < 3:
+		tk+=1
+	else:
+		tk=0
 
 ####################################################################################
 
 msgMtrx = tempMtrx
-#print(msgMtrx)
+print(msgMtrx)
 
 finalmsg=''
 tk = 0

@@ -16,7 +16,7 @@ MONTH = TIMELIST[1]
 DATE = TIMELIST[2]
 DOY = TIMELIST[7] #Day of Year
 
-msg = 'the quick brown fox jumps over the lazy dog. THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.'
+msg = 'This is a test message to cipher. Good luck!'
 
 key = 1658# 4-digit internal key, incase breached. not start or entirely zero.
 count = 'qwert5678yulzxcvbnm,./;[]QWER^&*TYUI}!@#OPASDF34GHJKLZXCVBNM<>?:{$iopas12dfghjk()_+-=90`~' #89bit number
@@ -96,7 +96,7 @@ while msgList:
 		ty, tz = 0, 0
 	
 #print('#### Msg matrix ####')
-#print(msgMtrx)
+print(msgMtrx)
 
 #################################################### 3D matrix
 
