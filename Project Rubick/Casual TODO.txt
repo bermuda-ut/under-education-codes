@@ -1,4 +1,0 @@
-1. Bad-ass ASCII art for the code
-
-2. Later on join encryption and decryption functions under one file and call them as functions.
-Currently divided for convience of understanding.
