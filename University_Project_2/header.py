@@ -1,6 +1,6 @@
 '''
 Author       : Ho Suk Lee (Max)
-Email        : maxisbac@hotmail.com
+Email        : maxisbac@gmail.com
 Last Modified: 10/MAY/15
 '''
 
