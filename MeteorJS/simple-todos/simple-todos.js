@@ -18,7 +18,8 @@ if (Meteor.isClient){
     },
 
     shortDate: function() {
-      return String(this.createdAt).substring(4,15);
+      longDate = this.createdAt
+      return String(longDate.getDate()) + "/" + String(longDate.getMonth() + 1)
     }
 
   });
