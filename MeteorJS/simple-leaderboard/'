@@ -21,8 +21,8 @@ Last Update : 12/07/15
     {{> listplayer}}
   {{/each}}
   </ol>
+  <br>
   {{#if loggedin}}
-  <p> Click on player's name to select as a target.</p><br>
     {{> clickgame}}
     {{> itemdisplay}}
   {{else}}
@@ -43,7 +43,6 @@ Last Update : 12/07/15
 </template>
 
 <template name="itemdisplay">
-  <h3 align='center'>Your items</h3>
-  <p><button id='buyAuto'>Purchase for {{autocost}} clicks</button> Auto Clicker({{autonum}}) - Automatically clicks for you every second.</p>
-  <p><button id='buyBomb'>Purchase for {{bombcost}} clicks</button> Bomb - Decrease selected target's score by {{bombamount}}.</p>
+  <p align='center'>Your items</p>
+  <p><button id='buyAuto'>Purchase for {{autocost}} clicks</button> Auto Clicker({{autonum}})</p>
 </template>

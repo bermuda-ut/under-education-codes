@@ -1,1 +1,12 @@
-/* CSS declarations go here */
+/*
+ * simeple-leaderboard.css
+ *
+ * Simple Leaderboard + Click Game
+ * Author      : Max Lee
+ * Email       : hoso1312@gmail.com
+ * Last Update : 12/07/15
+ * */
+
+.selected{
+  background-color: yellow;
+}
