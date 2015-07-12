@@ -1,0 +1,33 @@
+<head>
+  <title>simple-leaderboard</title>
+</head>
+
+<body>
+  <h1>Welcome to Click Games!</h1>
+
+  {{> loginButtons}}
+
+  <ol>
+  {{#each players}}
+    {{> listplayer}}
+  {{/each}}
+  </ol>
+  <br>
+  {{#if loggedin}}
+    {{> clickgame}}
+  {{else}}
+    <p> log in to play </p>
+  {{/if}}
+
+</body>
+
+<template name="listplayer">
+  <li> {{player}} - {{score}} - {{date}} </li> 
+</template>
+
+<template name="clickgame">
+  <p> Click your way! </p>
+  <button class="playerclick">
+    CLICK ME
+  </button>
+</template>
