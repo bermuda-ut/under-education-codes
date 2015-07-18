@@ -1,0 +1,14 @@
+<!--
+Author      : Max Lee
+Email       : hoso1312@gmail.com
+Last Edited : Sun Jul 19 05:19:47 AEST 2015
+-->
+
+<p>
+<strong><%= comment.commenter %>: </strong>
+<%= comment.body %>
+<br>
+<%= link_to 'delete', [comment.article, comment],
+                              method: :delete,
+                              data: { confirm: "Are you sure?" } %>
+                              </p>

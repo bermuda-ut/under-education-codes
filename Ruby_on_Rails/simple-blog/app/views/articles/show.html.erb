@@ -1,0 +1,25 @@
+<!--
+Author      : Max Lee
+Email       : hoso1312@gmail.com
+Last Edited : Sun Jul 19 05:19:47 AEST 2015
+-->
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+  
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
