@@ -1,0 +1,21 @@
+== README
+
+MyRecipies App
+
+Things you may want to cover:
+
+* Ruby version : 2.2.2
+
+* Rails version : 4.2.3
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+* ...
+
+
+<tt>rake doc:app</tt>.
