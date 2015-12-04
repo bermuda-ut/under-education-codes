@@ -2,7 +2,7 @@
 
 <% @recipes.each do |r| %>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 center">
       <%= if r.picture? then image_tag(r.picture.url, class: "recipe_pic_list") 
       else render 'shared/no_picture' end%>
     </div>
@@ -13,6 +13,15 @@
       <p>
       <span class='quiet'><small> <%= time_ago_in_words(r.created_at) %> ago</small></span>
       </p>
+
+      <div class="pull-right">
+        <i class="glyphicon glyphicon-thumbs-up"></i>
+        &nbsp;<%= r.thumbsup_total %>
+        &nbsp;&nbsp;&nbsp;
+        <i class="glyphicon glyphicon-thumbs-down"></i>
+        &nbsp;<%= r.thumbsdown_total %>
+      </div>
+
     </div>
 
     <div class="col-md-2">

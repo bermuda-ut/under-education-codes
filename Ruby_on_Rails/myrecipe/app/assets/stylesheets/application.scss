@@ -82,13 +82,12 @@ h2 {
 
 .recipemenu {
   margin-top:10px;
-  border-right: 1px solid #eaeaea;
-  border-left: 1px solid #eaeaea;
 }
 
 .recipemenuitem {
-  margin-top: 10px;
-  margin-bottom:10px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  font-size: 1.4em;
   width: 100%;
 }
 
@@ -128,19 +127,21 @@ h2 {
 }
 
 .recipe_pic {
-  width: 100%;
   border-radius: 10px;
+  max-height: 600px;
 }
 
 .recipe_pic_list {
   border-radius: 10px;
-  width:100%;
-  max-height: 300px;
+  max-height: 200px;
+  max-width: 295px;
+  margin-bottom: 20px;
 }
 
 .show_pic_holder {
   margin-top: 30px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 span.picture {

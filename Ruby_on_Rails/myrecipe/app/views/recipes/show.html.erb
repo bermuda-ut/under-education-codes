@@ -11,11 +11,23 @@
   </div>
 
   <div class="col-md-2 recipemenu">
-    <%= link_to "Edit this recipe", edit_recipe_path(@recipe),
-      class:"btn btn-info btn-small recipemenuitem"%>
-    <%= link_to "Rate this recipe", "",
-      class:"btn btn-success btn-small recipemenuitem"%>
-  </div>
+    <div class="recipemenuitem">
+      <p>
+      <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
+        <i class="glyphicon glyphicon-thumbs-up"></i>
+        &nbsp;<%= @recipe.thumbsup_total %>
+      <%end%>
+      </p>
+    </div>
+
+    <div class="recipemenuitem">
+      <p>
+      <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
+        <i class="glyphicon glyphicon-thumbs-down"></i>
+        &nbsp;<%= @recipe.thumbsdown_total %>
+      <%end%>
+      </p>
+    </div>  </div>
 </div>
 
 <div class="col-md-12 show_pic_holder">
@@ -32,5 +44,9 @@
 <hr/>
 
 <h5 class='center'>
+<%= link_to "Edit this recipe", edit_recipe_path(@recipe), class:"btn btn-info btn-small"%>
+&nbsp;
+&nbsp;
+&nbsp;
 <%= link_to "Return to All Recipes", recipes_path, class:"btn btn-warning btn-small" %>
 </h5>

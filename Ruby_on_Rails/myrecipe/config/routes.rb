@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   #patch '/recipes/:id', to: 'recipes#update'
   #delete '/recipes/:id', to: 'recipes#destroy'
 
-  resources :recipes
+  resources :recipes do
+    member do
+      post 'like'
+    end
+  end
 
 end
 
