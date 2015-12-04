@@ -6819,3 +6819,4 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.0ms)
   [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  ORDER BY "recipes"."id" ASC LIMIT 1[0m
   [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"  ORDER BY "recipes"."id" ASC LIMIT 1
+  [1m[36mChef Load (2.8ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
