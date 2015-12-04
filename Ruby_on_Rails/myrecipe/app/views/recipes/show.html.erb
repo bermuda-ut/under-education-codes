@@ -18,6 +18,10 @@
   </div>
 </div>
 
+<div class="col-md-12 show_pic_holder">
+  <%= image_tag(@recipe.picture.url, class: "recipe_pic") if @recipe.picture? %>
+</div>
+
 <hr/>
 
 <h2 class='left'>Steps to follow</h2>

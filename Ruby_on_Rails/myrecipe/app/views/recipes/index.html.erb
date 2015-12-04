@@ -2,24 +2,26 @@
 
 <% @recipes.each do |r| %>
   <div class="row">
-    <div class="col-md-2 pull-right">
-      <section class="chef_info center">
-        <%= gravatar_for r.chef, size: 100 %>
-        <h5>Created by <%= r.chef.name %></h5>
-      </section>
+    <div class="col-md-4">
+      <%= if r.picture? then image_tag(r.picture.url, class: "recipe_pic_list") 
+      else render 'shared/no_picture' end%>
     </div>
 
-    <div class="col-md-2">
-      <p>picture here</p>
-    </div>
-
-    <div class="col-md-8 well">
+    <div class="col-md-6 well">
       <h4><%= link_to r.name, recipe_path(r) %></h4>
       <p><%= r.summary %></p>
       <p>
       <span class='quiet'><small> <%= time_ago_in_words(r.created_at) %> ago</small></span>
       </p>
     </div>
+
+    <div class="col-md-2">
+      <section class="chef_info center">
+        <%= gravatar_for r.chef, size: 100 %>
+        <h5>Created by <%= r.chef.name %></h5>
+      </section>
+    </div>
+
 
   </div>
   <hr/>
