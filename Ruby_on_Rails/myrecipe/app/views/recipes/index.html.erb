@@ -1,15 +1,19 @@
-<h1>Recipes</h1>
-<hr/>
+<%= render 'shared/title', title: "All Recipes" %>
+
 <% @recipes.each do |r| %>
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-2 pull-right">
       <section class="chef_info center">
         <%= gravatar_for r.chef, size: 100 %>
         <h5>Created by <%= r.chef.name %></h5>
       </section>
     </div>
 
-    <div class="col-lg-8 well">
+    <div class="col-md-2">
+      <p>picture here</p>
+    </div>
+
+    <div class="col-md-8 well">
       <h4><%= link_to r.name, recipe_path(r) %></h4>
       <p><%= r.summary %></p>
       <p>

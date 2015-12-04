@@ -1,20 +1,28 @@
-<h1><%= @recipe.name %></h1>
+<%= render 'shared/title', title: @recipe.name %>
 
 <div class="row">
   <div class='col-md-4 pull-right center'>
     <%= gravatar_for @recipe.chef, size:100 %>
     <h5>Created by <%= @recipe.chef.name %></h5>
   </div>
-  <div class="col-md-8">
-    <h2 class='left'><%= @recipe.summary %></h2>
+
+  <div class="col-md-6 vertdiv">
+    <h3><%= @recipe.summary %></h2>
+  </div>
+
+  <div class="col-md-2 recipemenu">
+    <%= link_to "Edit this recipe", edit_recipe_path(@recipe),
+      class:"btn btn-info btn-small recipemenuitem"%>
+    <%= link_to "Rate this recipe", "",
+      class:"btn btn-success btn-small recipemenuitem"%>
   </div>
 </div>
 
 <hr/>
 
-<h3>Steps to follow</h3>
+<h2 class='left'>Steps to follow</h2>
 <div class='rec_details well'>
-  <%=@recipe.description %>
+  <%= simple_format(@recipe.description) %>
 </div>
 
 <hr/>

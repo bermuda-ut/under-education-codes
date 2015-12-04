@@ -80,10 +80,41 @@ h2 {
   color: #777;
 }
 
+.recipemenu {
+  margin-top:10px;
+  border-right: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea;
+}
+
+.recipemenuitem {
+  margin-top: 10px;
+  margin-bottom:10px;
+  width: 100%;
+}
+
 .chef_info {
   margin-top: 10px;
 }
 
 .gravatar {
   border-radius: 20px;
+}
+
+.well {
+  background-color: #ededed;
+}
+
+.topmsg {
+  margin-top: 10px;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input {
+  height: auto !important;
 }
