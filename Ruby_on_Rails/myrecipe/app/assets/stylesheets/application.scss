@@ -52,6 +52,7 @@ h1 {
   text-align: center;
   font-size: 3em;
   letter-spacing: -2px;
+  font-weight: bold;
 }
 
 h2 {
@@ -77,4 +78,12 @@ h2 {
   margin-top: 25px;
   border-top: 1px solid #eaeaea;
   color: #777;
+}
+
+.chef_info {
+  margin-top: 10px;
+}
+
+.gravatar {
+  border-radius: 20px;
 }

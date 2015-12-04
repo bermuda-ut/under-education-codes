@@ -8,24 +8,13 @@
 </head>
 <body>
 
-<nav class="navbar navbar-fixed-top navbar-default">
-  <div class='container'>
-    <%= link_to "MyRecipe","", class: "btn btn-success btn-lg", id: "logo" %>
-
-    <%= link_to "Link1","", class: "btn btn-warning btn-default", id: "navitem" %>
-    <%= link_to "Link2","", class: "btn btn-warning btn-default", id: "navitem" %>
-    <%= link_to "Link3","", class: "btn btn-warning btn-default", id: "navitem" %>
-  </div>
-</nav>
+<%= render 'layouts/navigation' %>
 
 <div class='container'>
 
 <%= yield %>
 
-<div class='footer'>
-  <p>&copy; MyRecipe 2015-2016</p>
-</div>
-
+<%= render 'layouts/footer' %>
 </div>
 
 </body>
