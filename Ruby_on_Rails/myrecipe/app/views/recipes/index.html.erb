@@ -1,5 +1,9 @@
 <%= render 'shared/title', title: "All Recipes" %>
 
+<div class="center">
+<%= will_paginate %>
+</div>
+
 <% @recipes.each do |r| %>
   <div class="row">
     <div class="col-md-4 center">
@@ -35,3 +39,7 @@
   </div>
   <hr/>
 <% end %>
+
+<div class="center">
+<%= will_paginate %>
+</div>
