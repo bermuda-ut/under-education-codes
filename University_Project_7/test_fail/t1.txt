@@ -1,0 +1,49 @@
+15
+0"list.h"
+1"list.c"
+2"list.o"
+3"graph.h"
+4"graph.c"
+5"graph.o"
+6"graphio.h"
+7"graphio.c"
+8"graphio.o"
+9"toposort.h"
+10"toposort.c"
+11"toposort.o"
+12"main.c"
+13"main.o"
+14"ass1"
+0 1
+1 2
+0 2
+0 3
+3 4
+4 5
+2 5
+3 5
+3 6
+6 7
+7 8
+2 8
+5 8
+3 9
+2 11
+5 11
+9 10
+9 11
+3 12
+6 12
+9 12
+12 13
+6 13
+3 13
+9 13
+13 14
+2 14
+5 14
+8 14
+11 14
+2 13
+0 14
+10 11

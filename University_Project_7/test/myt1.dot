@@ -1,0 +1,17 @@
+digraph {
+  "0list.h" -> { "14ass1"  "3graph.h"  "2list.o"  "1list.c" }
+  "1list.c" -> { "2list.o" }
+  "2list.o" -> { "13main.o"  "14ass1"  "11toposort.o"  "8graphio.o"  "5graph.o" }
+  "3graph.h" -> { "13main.o"  "12main.c"  "9toposort.h"  "6graphio.h"  "5graph.o"  "4graph.c" }
+  "4graph.c" -> { "5graph.o" }
+  "5graph.o" -> { "14ass1"  "11toposort.o"  "8graphio.o" }
+  "6graphio.h" -> { "13main.o"  "12main.c"  "7graphio.c" }
+  "7graphio.c" -> { "8graphio.o" }
+  "8graphio.o" -> { "14ass1" }
+  "9toposort.h" -> { "13main.o"  "12main.c"  "11toposort.o"  "10toposort.c" }
+  "10toposort.c" -> { "11toposort.o" }
+  "11toposort.o" -> { "14ass1" }
+  "12main.c" -> { "13main.o" }
+  "13main.o" -> { "14ass1" }
+  "14ass1"
+}

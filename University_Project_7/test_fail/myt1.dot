@@ -1,0 +1,17 @@
+digraph {
+  0"list.h" -> { 14"ass1"  3"graph.h"  2"list.o"  1"list.c" }
+  1"list.c" -> { 2"list.o" }
+  2"list.o" -> { 13"main.o"  14"ass1"  11"toposort.o"  8"graphio.o"  5"graph.o" }
+  3"graph.h" -> { 13"main.o"  12"main.c"  9"toposort.h"  6"graphio.h"  5"graph.o"  4"graph.c" }
+  4"graph.c" -> { 5"graph.o" }
+  5"graph.o" -> { 14"ass1"  11"toposort.o"  8"graphio.o" }
+  6"graphio.h" -> { 13"main.o"  12"main.c"  7"graphio.c" }
+  7"graphio.c" -> { 8"graphio.o" }
+  8"graphio.o" -> { 14"ass1" }
+  9"toposort.h" -> { 13"main.o"  12"main.c"  11"toposort.o"  10"toposort.c" }
+  10"toposort.c" -> { 11"toposort.o" }
+  11"toposort.o" -> { 14"ass1" }
+  12"main.c" -> { 13"main.o" }
+  13"main.o" -> { 14"ass1" }
+  14"ass1"
+}

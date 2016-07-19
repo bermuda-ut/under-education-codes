@@ -1,0 +1,90 @@
+==============================================================================
+============= Testing Your Hashing Assignment: A Starting Point ==============
+COMP20007 - Design of Algorithms                    carter.bush@unimelb.edu.au
+==============================================================================
+Disclaimer: This is just a starting point for your testing. The author bear no
+responsibility if you pass these tests and your code is still buggy/fails!
+There has not been significant testing of these instructions by the author, 
+so instructions could be wrong, and the author bears no responsibility for 
+your grades :D
+==============================================================================
+
+STAGE A0
+========
+Run your assignment on some-fruit.txt
+Use the "-t s" option set the data type to strings
+Use the "-f fruit-tests/some-fruit.txt" option to search for the items in 
+    some-fruit.txt
+Use the "-p" option to print out the hashtable
+
+Your program should fill the hashtable with the items from some-fruit.txt, and
+then search for all the items in some-fruit.txt. 
+Every item should be found, and every item should have been hashed to the 0th
+bucket 0.
+
+STAGE A
+========
+Rerun the same command as above. Nothing should change, except your hashtable
+size should change automatically to the next prime after twice the default size 
+of 11 (obviously this should be 23).
+Use the "-n 3900" option to see if your program successfully creates a 
+hashtable of size 7817 (the next prime after 7800)
+
+STAGE B
+========
+Rerun according to stage A0, but use the "-r l" option to use linear probing.
+This time, items should be hashed to separate buckets in sequence (ie apple to
+bucket 0, banana to bucket 1, cherry to bucket 2 etc).
+
+STAGE C
+========
+Rerun according to stage A0, but use the "-h b" option to use bad-hashing. 
+The items in some-fruits.txt should be hashed to equally spaced buckets (because
+the fruit are named in a particular way), but the starting point should be
+random (as your 'a' should be picked randomly). 
+
+Rerun again, but use the "-s <num>" option to change the seed and verify that 
+your starting points are being chosen randomly. 
+
+Make sure you're using the "-f fruit-tests/some-fruit.txt", as you do need to 
+make sure that you are able to find the fruit once they've been inserted into 
+the table.
+
+You may want to test using just-apples.txt instead of some-fruit.txt. For this
+input, each item should be hashed to the same bucket.
+
+STAGE D
+========
+Rerun according to stage A0, but use the "-h u" option to use
+universal-hashing. The items in some-fruits.txt should now be hashed to
+non-predictable buckets. You should not be able to see any pattern between
+hashing locations. 
+
+Again, use the "-s <num>" option to change seed and verify that the items get
+hashed differently.
+
+Again, make sure that you use the "-f fruit-tests/some-fruit.txt" so you know
+that you can find items once they've been inserted into the table.
+
+Again, you may want to test using just-apples.txt. Each item should be hashed
+to the same bucket.
+
+STAGE E
+========
+Run your assignment as in stage A0.
+Use the "-c d" option to generate 5 strings that should hash to 0 using
+universal hashing.
+Redirect the output of your assignment to a new file:
+./ass2 -t s -c d fruit-test/some-fruit.txt > not-fruit.txt
+
+You should now be able to use this file as input to your program as in stage D
+./ass2 -t s -h u -p not-fruit.txt
+
+You should see that all your strings get hashed to bucket 0.
+You should rerun those two commands but add "-s <num>" and "-n <num>" options
+to ensure your code is behaving well. 
+
+STAGE F
+========
+As stage E, but use the "-c c" option instead of "-c d".
+

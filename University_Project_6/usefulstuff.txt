@@ -1,0 +1,7 @@
+bt
+break 
+n
+info locals
+up = one level of bt
+p *ht = print variable ht but dereference it 
+
